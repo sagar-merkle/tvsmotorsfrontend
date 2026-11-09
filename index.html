@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/personalise.css">
+  <link rel="stylesheet" href="css/chatbot.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -186,7 +188,7 @@
         <ul class="utility-nav">
           <li><a href="#" class="utility-nav__link"><img src="assets/img/flag-india.svg" alt="" width="20" height="14"> India</a></li>
           <li><a href="#" class="utility-nav__link"><img src="assets/img/icon-contact.svg" alt="" width="20" height="20"> Contact Us</a></li>
-          <li><a href="#" class="utility-nav__link"><img src="assets/img/icon-account.svg" alt="" width="20" height="20"> Account</a></li>
+          <li><a href="#" class="utility-nav__link"><img src="assets/img/icon-account.svg" alt="" width="20" height="20"> <span id="account-label">Account</span></a></li>
         </ul>
       </nav>
       <label for="nav-toggle" class="nav-backdrop" aria-hidden="true"></label>
@@ -196,92 +198,85 @@
   <main id="main">
     <h1 class="sr-only">TVS Motor - Motorcycles, Scooters, Electric Vehicles and Three Wheelers</h1>
 
-    <!-- ============ HERO SLIDER (CSS-only, radio controlled) ============ -->
-    <section class="hero" aria-label="Featured">
-      <input type="radio" name="hero" id="hero-1" class="sr-only" checked>
-      <input type="radio" name="hero" id="hero-2" class="sr-only">
-      <input type="radio" name="hero" id="hero-3" class="sr-only">
-      <input type="radio" name="hero" id="hero-4" class="sr-only">
-
+    <!-- ============ HERO SLIDESHOW ============ -->
+    <section class="hero" id="hero" aria-roledescription="carousel" aria-label="Featured TVS Motor banners">
       <div class="hero__viewport">
         <div class="hero__track">
-          <article class="hero__slide hero__slide--blue">
-            <div class="container hero__content">
-              <div class="hero__text">
-                <p class="hero__eyebrow">TVS Apache RTR 310</p>
-                <h2 class="hero__title">Unleash the<br>Freestyle Sport</h2>
-                <p class="hero__copy">Race-bred performance with class-leading tech. Book your test ride today.</p>
-                <div class="hero__cta">
-                  <a href="#" class="btn btn--light">Know More</a>
-                  <a href="#" class="btn btn--ghost">Book a Test Ride</a>
-                </div>
-              </div>
-              <img class="hero__img" src="assets/img/apache-rtr-310.webp" alt="TVS Apache RTR 310" width="372" height="218">
-            </div>
-          </article>
-
-          <article class="hero__slide hero__slide--dark">
-            <div class="container hero__content">
-              <div class="hero__text">
-                <p class="hero__eyebrow">TVS Ronin</p>
-                <h2 class="hero__title">Unscripted<br>by Design</h2>
-                <p class="hero__copy">The modern-retro motorcycle built for every kind of ride.</p>
-                <div class="hero__cta">
-                  <a href="#" class="btn btn--light">Know More</a>
-                  <a href="#" class="btn btn--ghost">Book a Test Ride</a>
-                </div>
-              </div>
-              <img class="hero__img" src="assets/img/ronin.webp" alt="TVS Ronin" width="372" height="218" loading="lazy">
-            </div>
-          </article>
-
-          <article class="hero__slide hero__slide--teal">
-            <div class="container hero__content">
-              <div class="hero__text">
-                <p class="hero__eyebrow">TVS Orbiter</p>
-                <h2 class="hero__title">Go Electric,<br>Go Further</h2>
-                <p class="hero__copy">Smart, connected and built for everyday city commutes.</p>
-                <div class="hero__cta">
-                  <a href="#" class="btn btn--light">Know More</a>
-                  <a href="#" class="btn btn--ghost">Book a Test Ride</a>
-                </div>
-              </div>
-              <img class="hero__img" src="assets/img/orbiter.webp" alt="TVS Orbiter" width="372" height="218" loading="lazy">
-            </div>
-          </article>
-
-          <article class="hero__slide hero__slide--red">
-            <div class="container hero__content">
-              <div class="hero__text">
-                <p class="hero__eyebrow">TVS Jupiter</p>
-                <h2 class="hero__title">Zyada ka<br>Fayda</h2>
-                <p class="hero__copy">India's favourite family scooter, now smarter than ever.</p>
-                <div class="hero__cta">
-                  <a href="#" class="btn btn--light">Know More</a>
-                  <a href="#" class="btn btn--ghost">Book a Test Ride</a>
-                </div>
-              </div>
-              <img class="hero__img" src="assets/img/jupiter.webp" alt="TVS Jupiter" width="372" height="218" loading="lazy">
-            </div>
-          </article>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/new-radeon-mobile.webp"><img src="assets/img/banners/new-radeon-desktop.webp" alt="TVS New Radeon" width="1905" height="837" fetchpriority="high"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/apache-rtr-310-mobile.webp"><img src="assets/img/banners/apache-rtr-310-desktop.webp" alt="TVS Apache RTR 310" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/apache-rr-310-mobile.webp"><img src="assets/img/banners/apache-rr-310-desktop.webp" alt="TVS Apache RR 310" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/ronin-mobile.webp"><img src="assets/img/banners/ronin-desktop.webp" alt="TVS Ronin" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/apache-rtr-series-mobile.webp"><img src="assets/img/banners/apache-rtr-series-desktop.webp" alt="TVS Apache RTR Series" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/jupiter-mobile.webp"><img src="assets/img/banners/jupiter-desktop.webp" alt="TVS Jupiter - India's 1st spectral colour scooter" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/jupiter-125-mobile.webp"><img src="assets/img/banners/jupiter-125-desktop.webp" alt="TVS Jupiter 125" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/apache-rtx-mobile.webp"><img src="assets/img/banners/apache-rtx-desktop.webp" alt="TVS Apache RTX - Indian Motorcycle of the Year" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/ronin-agonda-mobile.webp"><img src="assets/img/banners/ronin-agonda-desktop.webp" alt="TVS Ronin Agonda" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/noise-iqube-watch-mobile.webp"><img src="assets/img/banners/noise-iqube-watch-desktop.webp" alt="Noise x TVS iQube smartwatch" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/ntorq-150-mobile.webp"><img src="assets/img/banners/ntorq-150-desktop.webp" alt="TVS Ntorq 150" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/orbiter-mobile.webp"><img src="assets/img/banners/orbiter-desktop.webp" alt="TVS Orbiter" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/raider-mobile.webp"><img src="assets/img/banners/raider-desktop.webp" alt="TVS Raider 125" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/iqube-mobile.webp"><img src="assets/img/banners/iqube-desktop.webp" alt="TVS iQube" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/sustainability-mobile.webp"><img src="assets/img/banners/sustainability-desktop.webp" alt="Sustainability Report 2025-26 - Redefining mobility, elevating lives" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/sport-mobile.webp"><img src="assets/img/banners/sport-desktop.webp" alt="TVS Sport" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/xl100-mobile.webp"><img src="assets/img/banners/xl100-desktop.webp" alt="TVS XL100" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
+          <div class="hero__slide">
+            <a href="#" class="hero__link"><picture><source media="(max-width: 767px)" srcset="assets/img/banners/service-mobile.webp"><img src="assets/img/banners/service-desktop.webp" alt="TVS Motor service" width="1905" height="837" loading="lazy"></picture></a>
+          </div>
         </div>
       </div>
 
-      <div class="hero__dots" aria-label="Choose slide">
-        <label for="hero-1"><span class="sr-only">Slide 1</span></label>
-        <label for="hero-2"><span class="sr-only">Slide 2</span></label>
-        <label for="hero-3"><span class="sr-only">Slide 3</span></label>
-        <label for="hero-4"><span class="sr-only">Slide 4</span></label>
-      </div>
+      <button type="button" class="hero__arrow hero__arrow--prev" aria-label="Previous banner" hidden></button>
+      <button type="button" class="hero__arrow hero__arrow--next" aria-label="Next banner" hidden></button>
+      <div class="hero__dots" role="group" aria-label="Choose banner"></div>
+
+      <!-- Personalised hero (filled by js/personalise.js) -->
+      <div class="hero__personal" id="hero-personal" hidden></div>
     </section>
+
+    <!-- ============ PERSONALISED JOURNEY (filled by js/personalise.js) ============ -->
+    <section class="journey" id="journey" aria-label="Your journey" hidden></section>
 
     <!-- ============ DISCOVER YOUR RIDE ============ -->
     <section class="section ride" id="vehicles">
       <div class="container">
         <div class="section-head section-head--split">
           <div>
-            <p class="eyebrow">Vehicles</p>
-            <h2 class="section-title">Discover Your Ride</h2>
+            <p class="eyebrow" id="ride-eyebrow">Vehicles</p>
+            <h2 class="section-title" id="ride-title">Discover Your Ride</h2>
           </div>
           <label class="state-select">
             <span>Prices for</span>
@@ -314,7 +309,7 @@
             <!-- Motorcycles -->
             <div class="tabs__panel" id="panel-moto">
               <div class="card-row">
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="apache-rtx">
                   <a href="#" class="bike-card__media"><img src="assets/img/apache-rtx.webp" alt="TVS Apache RTX" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">Apache RTX</a></h3>
@@ -327,7 +322,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="apache-rr-310">
                   <a href="#" class="bike-card__media"><img src="assets/img/apache-rr-310.webp" alt="TVS Apache RR 310" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">Apache RR 310</a></h3>
@@ -340,7 +335,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="apache-rtr-310">
                   <a href="#" class="bike-card__media"><img src="assets/img/apache-rtr-310.webp" alt="TVS Apache RTR 310" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">Apache RTR 310</a></h3>
@@ -353,7 +348,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="apache-rtr-series">
                   <a href="#" class="bike-card__media"><img src="assets/img/apache-rtr-series.webp" alt="TVS Apache RTR Series" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS Apache RTR Series</a></h3>
@@ -364,7 +359,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="ronin">
                   <a href="#" class="bike-card__media"><img src="assets/img/ronin.webp" alt="TVS Ronin" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS Ronin</a></h3>
@@ -377,7 +372,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="raider">
                   <a href="#" class="bike-card__media"><img src="assets/img/raider.webp" alt="TVS Raider" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS Raider</a></h3>
@@ -390,7 +385,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="new-radeon">
                   <a href="#" class="bike-card__media"><img src="assets/img/new-radeon.webp" alt="TVS New Radeon" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">New Radeon</a></h3>
@@ -403,7 +398,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="radeon">
                   <a href="#" class="bike-card__media"><img src="assets/img/radeon.webp" alt="TVS Radeon" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">Radeon</a></h3>
@@ -416,7 +411,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="sport">
                   <a href="#" class="bike-card__media"><img src="assets/img/sport.webp" alt="TVS Sport" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS Sport</a></h3>
@@ -436,7 +431,7 @@
             <!-- Scooters -->
             <div class="tabs__panel" id="panel-scooter">
               <div class="card-row">
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="ntorq-150">
                   <a href="#" class="bike-card__media"><img src="assets/img/ntorq-150.webp" alt="TVS Ntorq 150" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS Ntorq 150</a></h3>
@@ -449,7 +444,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="ntorq-125">
                   <a href="#" class="bike-card__media"><img src="assets/img/ntorq-125.webp" alt="TVS Ntorq 125" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS Ntorq 125</a></h3>
@@ -462,7 +457,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="jupiter">
                   <a href="#" class="bike-card__media"><img src="assets/img/jupiter.webp" alt="TVS Jupiter" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS Jupiter</a></h3>
@@ -475,7 +470,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="jupiter-125">
                   <a href="#" class="bike-card__media"><img src="assets/img/jupiter-125.webp" alt="TVS Jupiter 125" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS Jupiter 125</a></h3>
@@ -488,7 +483,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="zest-110">
                   <a href="#" class="bike-card__media"><img src="assets/img/zest-110.webp" alt="TVS Zest 110" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS Zest 110</a></h3>
@@ -508,7 +503,7 @@
             <!-- Electric -->
             <div class="tabs__panel" id="panel-electric">
               <div class="card-row">
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="iqube">
                   <a href="#" class="bike-card__media"><img src="assets/img/iqube.webp" alt="TVS iQube" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS iQube</a></h3>
@@ -521,7 +516,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="tvs-x">
                   <a href="#" class="bike-card__media"><img src="assets/img/tvs-x.webp" alt="TVS X" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS X</a></h3>
@@ -534,7 +529,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Test Ride</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="orbiter">
                   <a href="#" class="bike-card__media"><img src="assets/img/orbiter.webp" alt="TVS Orbiter" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS Orbiter</a></h3>
@@ -553,7 +548,7 @@
             <!-- Mopeds -->
             <div class="tabs__panel" id="panel-moped">
               <div class="card-row">
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="xl100">
                   <a href="#" class="bike-card__media"><img src="assets/img/xl100.webp" alt="TVS XL100" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS XL100</a></h3>
@@ -573,7 +568,7 @@
             <!-- Three Wheelers -->
             <div class="tabs__panel" id="panel-three">
               <div class="card-row">
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="king-deluxe">
                   <a href="#" class="bike-card__media"><img src="assets/img/king-deluxe.webp" alt="TVS King Deluxe" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS King Deluxe</a></h3>
@@ -581,7 +576,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Enquire</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="king-duramax-plus">
                   <a href="#" class="bike-card__media"><img src="assets/img/king-duramax-plus.webp" alt="TVS King Duramax Plus" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS King Duramax Plus</a></h3>
@@ -589,7 +584,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Enquire</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="king-ev-max">
                   <a href="#" class="bike-card__media"><img src="assets/img/king-ev-max.webp" alt="TVS King EV Max" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS King EV Max</a></h3>
@@ -597,7 +592,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Enquire</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="king-kargo-hd-ev">
                   <a href="#" class="bike-card__media"><img src="assets/img/king-kargo-hd-ev.webp" alt="TVS King Kargo HD EV" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS King Kargo HD EV</a></h3>
@@ -605,7 +600,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Enquire</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="king-kargo">
                   <a href="#" class="bike-card__media"><img src="assets/img/king-kargo.webp" alt="TVS King Kargo" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS King Kargo</a></h3>
@@ -613,7 +608,7 @@
                     <div class="bike-card__cta"><a href="#" class="btn btn--outline">Know More</a><a href="#" class="btn btn--primary">Enquire</a></div>
                   </div>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-vehicle="king-kargo-hd-cng">
                   <a href="#" class="bike-card__media"><img src="assets/img/king-kargo-hd-cng.webp" alt="TVS King Kargo HD CNG" width="372" height="218" loading="lazy"></a>
                   <div class="bike-card__body">
                     <h3 class="bike-card__title"><a href="#">TVS King Kargo HD CNG</a></h3>
@@ -687,9 +682,9 @@
           <div>
             <p class="eyebrow">Find a ride near you</p>
             <h2 class="section-title">Dealers</h2>
-            <p class="section-copy">Find your nearest authorised TVS Motor dealer with our easy-to-use interactive tool. Get all details including phone number, address, map and driving directions.</p>
+            <p class="section-copy" id="dealer-copy">Find your nearest authorised TVS Motor dealer with our easy-to-use interactive tool. Get all details including phone number, address, map and driving directions.</p>
           </div>
-          <a href="#" class="btn btn--primary btn--lg">Find a Dealer Near You</a>
+          <a href="#" class="btn btn--primary btn--lg" id="dealer-cta">Find a Dealer Near You</a>
         </div>
 
         <div class="dealer-grid">
@@ -988,5 +983,105 @@
       </div>
     </div>
   </footer>
+
+  <!-- ============ PERSONALISATION NUDGE ============ -->
+  <div class="p-nudge" id="p-nudge" hidden>
+    <button type="button" class="p-nudge__open" id="p-nudge-open">
+      <span class="p-nudge__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2l1.9 5.6L19.5 9.5l-5.6 1.9L12 17l-1.9-5.6L4.5 9.5l5.6-1.9L12 2zm7 11l.9 2.6 2.6.9-2.6.9L19 20l-.9-2.6-2.6-.9 2.6-.9L19 13zM5 15l.7 1.8 1.8.7-1.8.7L5 20l-.7-1.8-1.8-.7 1.8-.7L5 15z"/></svg>
+      </span>
+      <span class="p-nudge__text">
+        <strong>Hey! A personalised view is available for you.</strong>
+        <span>Click here to see the TVS that's right for you</span>
+      </span>
+    </button>
+    <button type="button" class="p-nudge__close" id="p-nudge-close" aria-label="Dismiss">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <!-- ============ PERSONALISATION DIALOG ============ -->
+  <dialog class="p-modal" id="p-modal" aria-labelledby="p-modal-title">
+    <div class="p-modal__head">
+      <span class="brand-avatar"><img src="assets/img/tvs-horse.svg" alt=""></span>
+      <div>
+        <p class="p-modal__brand">TVS Motor</p>
+        <p class="p-modal__sub">Personalised for you</p>
+      </div>
+      <button type="button" class="icon-btn" id="p-modal-close" aria-label="Close">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <form class="p-modal__body" id="p-form" novalidate>
+      <h2 id="p-modal-title">Hey! Please enter your phone number</h2>
+      <p class="p-modal__copy">We'll tailor the website to the vehicle you're interested in and where you are in your journey with us.</p>
+      <label class="p-field" for="p-phone">
+        <span class="p-field__prefix">+91</span>
+        <input id="p-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="10" placeholder="10-digit mobile number" aria-label="Mobile number" aria-describedby="p-error" required>
+      </label>
+      <p class="p-error" id="p-error" role="alert"></p>
+      <button type="submit" class="btn btn--primary p-submit" id="p-submit">Personalise my view</button>
+      <p class="p-consent">By continuing, you agree to TVS Motor's <a href="#">Privacy Policy</a>.</p>
+      <!-- Demo only: list will come from the backend, remove before go-live -->
+      <div class="p-demo">
+        <label for="p-demo-select">Demo: pick a test customer</label>
+        <select id="p-demo-select">
+          <option value="">Select a test customer&hellip;</option>
+        </select>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- ============ CHAT WIDGET ============ -->
+  <div class="chat-fab" id="chat-fab">
+    <button type="button" class="chat-teaser" id="chat-teaser" hidden></button>
+    <div class="chat-fab__menu" id="chat-fab-menu">
+      <a href="#" class="chat-fab__btn" aria-label="Chat with us on WhatsApp" tabindex="-1">
+        <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path fill="#25d366" d="M9.3 7.4c.2 0 .4 0 .5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.4.8 1 1.5 1.7 2.1.6.5 1.2.8 1.7 1 .2.1.4 0 .5-.1l.7-.8c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.2.1.9-.2 1.5-.3.6-1.4 1.2-2 1.2-.5 0-1.1.2-3.4-.8-2.6-1.1-4.2-3.8-4.4-4-.1-.2-1-1.4-1-2.7s.7-1.9.9-2.2c.3-.3.5-.3.7-.3h.3z"/></svg>
+      </a>
+      <button type="button" class="chat-fab__btn" id="chat-open" aria-label="Chat with the TVS Motor assistant" tabindex="-1">
+        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="#fff" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M4 4h16v12h-9l-4 4v-4H4z"/><circle cx="9" cy="9" r=".6" fill="#fff"/><circle cx="15" cy="9" r=".6" fill="#fff"/><path d="M8.5 12c1.8 1.6 5.2 1.6 7 0"/></svg>
+      </button>
+    </div>
+    <button type="button" class="chat-fab__toggle" id="chat-toggle" aria-expanded="false" aria-controls="chat-fab-menu" aria-label="Open chat options">
+      <span class="chat-fab__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <svg class="chat-fab__x" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path stroke="#fff" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <section class="chat" id="chat" role="dialog" aria-label="TVS Motor chat assistant" hidden>
+    <header class="chat__head">
+      <span class="brand-avatar brand-avatar--lg"><img src="assets/img/tvs-horse.svg" alt=""></span>
+      <div class="chat__title">
+        <strong>TVS Motor</strong>
+        <span class="chat__status">Always Active</span>
+      </div>
+      <div class="chat__actions">
+        <button type="button" class="icon-btn" id="chat-min" aria-label="Minimise chat">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 13h12"/></svg>
+        </button>
+        <button type="button" class="icon-btn" id="chat-refresh" aria-label="Restart conversation">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12a7 7 0 1 1-2.1-5"/><path d="M19 4v4h-4"/></svg>
+        </button>
+        <button type="button" class="icon-btn" id="chat-close" aria-label="Close chat">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="chat__body" id="chat-body"></div>
+    <form class="chat__composer" id="chat-form">
+      <input id="chat-input" type="text" placeholder="Ask me anything..." aria-label="Message" autocomplete="off">
+      <button type="submit" class="chat__send" aria-label="Send">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#fff" d="M3 20.5V14l9-2-9-2V3.5L22 12z"/></svg>
+      </button>
+    </form>
+  </section>
+
+  <script src="js/data/catalogue.js"></script>
+  <script src="js/mock/customers.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/personalise.js"></script>
 </body>
 </html>
